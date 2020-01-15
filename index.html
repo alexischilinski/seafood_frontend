@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script type="text/javascript" src="./html5usmapv3.9/mapdata.js"></script>		 -->
+    <!-- <script  type="text/javascript" src="./html5usmapv3.9/usmap.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Oregano&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css"/>
+    <title>Sustainable Seafood Choices</title>
+</head>
+<body>
+    <header>
+    <div class="title-container">
+        <h1 class="title1">Sustainable</h1>
+        <h1 class="title2">Seafood</h1>
+    </div>
+    <img class="header-image" src="./ClipartKey_55284.png"/>
+    </header>
+    <nav>
+        <input type="submit" value="Sign Up" class="sign-up"/>
+        <input type="submit" value="Login" class="login"/>
+        <form class="signup-form invisible-signup">
+            <input class="username" name="username" placeholder="username"/>
+            <input class="password" name="password" placeholder="password"/>
+            <span>In which US region do you live?</span>
+            <select class="region-dropdown" name="region"></select>
+            <input type="submit" value="Sign Up"/>
+        </form>
+        <form class="login-form invisible-login">
+            <input class="login-un" name="username" placeholder="username"/>
+            <input class="login-pw" name="password" placeholder="password"/>
+            <input type="submit" value="Login"/>
+        </form>
+    </nav>
+    <div class="modal">
+        <div class="modal-content">
+            <button class="close-button">X</button>
+                <div class="fish-data" style='height:27rem;width:30rem;overflow:auto;'>
+                    <img class="fish-image">
+                    <div class="info">
+                        <h3>Scientific Name</h3>
+                        <div class="scientific-name"></div>
+                        <h3>Location</h3>
+                        <div class="location"></div>
+                        <h3>Biology</h3>
+                        <div class="biology"></div>
+                        <h2>Sustainability Data</h2>
+                        <h3>Population</h3>
+                        <div class="population"></div>
+                        <h3>Best Harvest</h3>
+                        <div class="best-harvest"></div>
+                        <h3>Fishing Rate</h3>
+                        <div class="fishing-rate"></div>
+                        <h3>Availability</h3>
+                        <div class="availability"></div>
+                        <h3>Health Benefits</h3>
+                        <div class="health-benefits"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="search">
+    <div class="search-seafood">
+        <h3>Search by Seafood Name</h3>
+        <div class="seafood-list">
+            <form class="fish-form">
+                <input class="fish-input" type="text" name="species" placeholder="e.g. cod, tuna, etc">
+                <input type="submit" value="search">
+            </form>
+            <div class="fish-list" style='height:14.9rem;width:20rem;overflow:auto;'></div>
+    </div>
+        </div>
+    <div class="search-region">
+        <h3>Search by Region</h3>
+        <div class="map-container">
+                <object data="./Blank_US_Map_(states_only).svg" type="image/svg+xml"
+                id="svg"></object>
+                <div class="mapkey">
+                    <h4>Map Key</h4>
+                    <ul>
+                        <li class="alaska">Alaska</li>
+                        <li class="westcoast">West Coast</li>
+                        <li class="pacific">Pacific Islands</li>
+                        <li class="southeast">Southeast</li>
+                        <li class="atlantic">Atlantic</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>

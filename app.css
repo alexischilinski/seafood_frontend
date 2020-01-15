@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end meyer reset */
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: darkturquoise;
+    height: 8rem;
+    border-bottom: solid lightblue 2rem;
+}
+
+.title-container {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.title1 {
+    font-family: 'Oregano', cursive;
+    font-size: 3.5rem;
+}
+
+.title2 {
+    font-family: 'Oregano', cursive;
+    font-size: 3.5rem;
+    margin-top: 1.5rem;
+}
+
+.header-image {
+    width: 60rem;
+    height: 7rem;
+}
+
+nav {
+    background-color:#175b8b;
+    height: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.sign-up {
+    margin-top: 0.45rem;
+}
+
+.login {
+    margin-top: 0.45rem;
+}
+
+.signup-form {
+    margin-top: 0.45rem
+}
+
+.login-form {
+    margin-top: 0.45rem
+}
+
+.invisible {
+    display: none;
+}
+
+.invisible-signup {
+    display: none
+}
+
+.invisible-login {
+    display: none
+}
+
+/* .signup-form {
+    display: none;
+}
+
+.login-form {
+    display: none;
+} */
+
+.search {
+    display: flex;
+    justify-content: space-evenly;
+    /* border-top: solid #175b8b 2rem; */
+    font-family: arial;
+}
+
+.search-seafood {
+    height: 20rem;
+    width: 40rem;
+    border: solid #000000;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem
+}
+
+.seafood-list {
+    align-items: center;
+}
+
+.info-button {
+    background-image: url("https://image.flaticon.com/icons/svg/32/32175.svg");
+    background-size: 100%;
+    background-position: center;
+    height: 1rem;
+    width: 1rem;
+    border: none;
+}
+
+.search-region {
+    height: 20rem;
+    width: 40rem;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+h3 {
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.fish-input {
+    width: 10rem;
+    margin-left: 1rem;
+}
+
+.fish-list {
+    margin-top: 0.9rem;
+    margin-left: 0.3rem;
+}
+
+.fish-name {
+    font-size: 1.2rem;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+}
+
+.map {
+    border: solid black;
+    height: 15rem;
+    width: 25rem;
+    display: flex;
+    justify-items: center;
+}
+
+.mapkey {
+    border: solid black;
+    height: 8rem;
+    width: 8rem;
+    display: block;
+}
+
+ul {
+    margin-left: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.alaska {
+    color: #ccecfc;
+    font-weight: bold;
+}
+
+.westcoast {
+    color: #7cd3f6;
+    font-weight: bold;
+}
+
+.southeast {
+    color: #00a2d4;
+    font-weight: bold;
+}
+
+.atlantic {
+    color: #175b8b;
+    font-weight: bold;
+}
+
+.pacific {
+    color:darkturquoise;
+    font-weight: bold;
+}
+
+.mapsvg {
+    width: 25rem;
+    height: 15rem;
+}
+
+object {
+    width: 25rem;
+    height: 15rem;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0x linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 30rem;
+    height:30rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.fish-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: arial;
+}
+
+.fish-image {
+    height: 10rem;
+    width: 20rem;
+}
+
+.scientific-name {
+    font-style: italic;
+}
+
+g.west:hover {
+    color: red;
+}
