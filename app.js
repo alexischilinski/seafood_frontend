@@ -27,7 +27,7 @@ const availability = document.querySelector('.availability')
 const healthBenefits = document.querySelector('.health-benefits')
 
 
-fetch('http://localhost:3000/fish')
+fetch('https://mod3seafood.herokuapp.com/fish')
     .then(response=>response.json())
     .then(fishes=>fishes.sort(aToZ).map(fishNames))
 
@@ -162,7 +162,7 @@ map.addEventListener('load', ()=>{
     })
 })
 
-fetch('http://localhost:3000/regions')
+fetch('https://mod3seafood.herokuapp.com/regions')
     .then(response=>response.json())
     .then(regions=>regions.sort(aToZ).map(regionNames))
 
