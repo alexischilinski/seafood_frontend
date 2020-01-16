@@ -3,6 +3,8 @@ const loginButton = document.querySelector('.login')
 const signupForm = document.querySelector('.signup-form')
 const loginForm = document.querySelector('.login-form')
 const regionDropdown = document.querySelector('.region-dropdown')
+const navbar = document.querySelector('nav')
+const userInfo = document.querySelector('.user-info')
 
 const seafoodContainer = document.querySelector('.fish-list')
 const speciesForm = document.querySelector('.fish-form')
@@ -41,28 +43,24 @@ function aToZ(a, b){
 function fishNames(fish){
     const fishName = document.createElement('li')
     const infoButton = document.createElement('button')
+    const addFish = document.createElement('button')
 
     fishName.innerText = `${fish.name} `
     fishName.className = "fish-name"
     infoButton.className = "info-button"
+    addFish.className = "add-fish"
     fishName.id = `${fish.region}`
 
     infoButton.addEventListener('click', event => {
-        fishImage.src = fish.image
-        scientificName.innerText = fish.scientific_name
-        fishLocation.innerHTML = fish.location
-        biology.innerHTML = fish.biology
-        population.innerText = fish.population
-        bestHarvest.innerText = fish.best_harvest
-        fishingRate.innerText = fish.fishing_rate
-        availability.innerHTML = fish.availability
-        healthBenefits.innerHTML = fish.health_benefits
-        modal.classList.toggle('show-modal')
+        displayFishInfo(fish)
     })
+
     closeButton.addEventListener('click', toggleModal)
-    // window.addEventListener('click', windowOnClick)
 
     fishName.appendChild(infoButton)
+    if (localStorage.token){
+        fishName.appendChild(addFish)
+    }
     seafoodContainer.appendChild(fishName)
 }
 
@@ -71,6 +69,7 @@ speciesForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
     const formData = new FormData(speciesForm)
+    speciesInput.value = ""
     const fishArray = Array.prototype.slice.call(document.querySelectorAll('.fish-name'))
     fishArray.forEach(fish=>{
         if (fish.innerText.toLowerCase().includes((formData.get('species')).toLowerCase())){
@@ -88,6 +87,19 @@ signupButton.addEventListener('click', (event)=> {
 loginButton.addEventListener('click', (event)=>{
     toggleLogin()
 })
+
+function displayFishInfo(fish){
+    fishImage.src = fish.image
+    scientificName.innerText = fish.scientific_name
+    fishLocation.innerHTML = fish.location
+    biology.innerHTML = fish.biology
+    population.innerText = fish.population
+    bestHarvest.innerText = fish.best_harvest
+    fishingRate.innerText = fish.fishing_rate
+    availability.innerHTML = fish.availability
+    healthBenefits.innerHTML = fish.health_benefits
+    modal.classList.toggle('show-modal')
+}
 
 function toggleSignUp(){
     signupButton.classList.add('invisible')
@@ -115,8 +127,8 @@ function windowOnClick(event){
 map.addEventListener('load', ()=>{
     const mapDocument = map.contentDocument
     const state = mapDocument.querySelector('.state')
-    const gArray = Array.prototype.slice.call(state.querySelectorAll('g'))
-    gArray.map(region=>{
+    const stateArray = Array.prototype.slice.call(state.querySelectorAll('g'))
+    stateArray.map(region=>{
         region.addEventListener('mouseenter', (event)=>{
             event.target.style.fill = "purple"
         })
@@ -168,7 +180,59 @@ fetch('https://mod3seafood.herokuapp.com/regions')
 
 function regionNames(region){
     const regionOption = document.createElement('option')
-    regionOption.innerText = region.name 
+    regionOption.innerText = region.name
+    regionOption.value = region.id
 
     regionDropdown.appendChild(regionOption)
+}
+
+signupForm.addEventListener('submit', (event) =>{
+    event.preventDefault()
+
+    const signupFormData = new FormData(signupForm)
+    const username = signupFormData.get('username')
+    const password = signupFormData.get('password')
+    const region_id = signupFormData.get('region')
+
+    fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({user:{username, password, region_id}})
+    })
+})
+
+loginForm.addEventListener('submit', (event)=>{
+    event.preventDefault()
+
+    const loginFormData = new FormData(loginForm)
+    const username = loginFormData.get('username')
+    const password = loginFormData.get('password')
+
+    fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({username, password})
+    })
+    .then(response=>response.json())
+    .then((result) => {
+        return result.error ? alert(result.error) : localStorage.setItem('token', result.token)
+    })
+})
+
+if(localStorage.token){
+    const logoutButton = document.createElement('button')
+    logoutButton.innerText = "Logout"
+    logoutButton.className = "logout-button"
+    logoutButton.addEventListener('click', (event)=>{
+        localStorage.removeItem('token')
+    })
+    loginForm.classList.add('invisible-login')
+    signupButton.classList.add('invisible')
+    loginButton.classList.add('invisible')
+    userInfo.classList.remove('invisible-info')
+    navbar.appendChild(logoutButton)
 }

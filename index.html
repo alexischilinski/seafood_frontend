@@ -22,15 +22,15 @@
         <input type="submit" value="Sign Up" class="sign-up"/>
         <input type="submit" value="Login" class="login"/>
         <form class="signup-form invisible-signup">
-            <input class="username" name="username" placeholder="username"/>
-            <input class="password" name="password" placeholder="password"/>
+            <input type="text class="username" name="username" placeholder="username"/>
+            <input type="password" class="password" name="password" placeholder="password"/>
             <span>In which US region do you live?</span>
             <select class="region-dropdown" name="region"></select>
             <input type="submit" value="Sign Up"/>
         </form>
         <form class="login-form invisible-login">
-            <input class="login-un" name="username" placeholder="username"/>
-            <input class="login-pw" name="password" placeholder="password"/>
+            <input type="text" class="login-un" name="username" placeholder="username"/>
+            <input type="password" class="login-pw" name="password" placeholder="password"/>
             <input type="submit" value="Login"/>
         </form>
     </nav>
@@ -61,7 +61,7 @@
                 </div>
         </div>
     </div>
-    <div class="search">
+<div class="search">
     <div class="search-seafood">
         <h3>Search by Seafood Name</h3>
         <div class="seafood-list">
@@ -70,25 +70,28 @@
                 <input type="submit" value="search">
             </form>
             <div class="fish-list" style='height:14.9rem;width:20rem;overflow:auto;'></div>
-    </div>
         </div>
+    </div>
     <div class="search-region">
         <h3>Search by Region</h3>
         <div class="map-container">
-                <object data="./Blank_US_Map_(states_only).svg" type="image/svg+xml"
-                id="svg"></object>
-                <div class="mapkey">
-                    <h4>Map Key</h4>
-                    <ul>
-                        <li class="alaska">Alaska</li>
-                        <li class="westcoast">West Coast</li>
-                        <li class="pacific">Pacific Islands</li>
-                        <li class="southeast">Southeast</li>
-                        <li class="atlantic">Atlantic</li>
-                    </ul>
-                </div>
+            <object data="./Blank_US_Map_(states_only).svg" type="image/svg+xml"
+            id="svg"></object>
+            <div class="mapkey">
+                <h4>Map Key</h4>
+                <ul>
+                    <li class="alaska">Alaska</li>
+                    <li class="westcoast">West Coast</li>
+                    <li class="pacific">Pacific Islands</li>
+                    <li class="southeast">Southeast</li>
+                    <li class="atlantic">Atlantic</li>
+                </ul>
+            </div>
         </div>
     </div>
+</div>
+<div class="user-info invisible-info">
+    <div class="user-fish"></div>
 </div>
 
     

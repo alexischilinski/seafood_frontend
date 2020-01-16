@@ -94,6 +94,11 @@ nav {
     margin-top: 0.45rem;
 }
 
+.logout-button {
+    margin-top: 0.45rem;
+    height: 1.25rem;
+}
+
 .signup-form {
     margin-top: 0.45rem
 }
@@ -114,18 +119,9 @@ nav {
     display: none
 }
 
-/* .signup-form {
-    display: none;
-}
-
-.login-form {
-    display: none;
-} */
-
 .search {
     display: flex;
     justify-content: space-evenly;
-    /* border-top: solid #175b8b 2rem; */
     font-family: arial;
 }
 
@@ -143,7 +139,16 @@ nav {
 }
 
 .info-button {
-    background-image: url("https://image.flaticon.com/icons/svg/32/32175.svg");
+    background-image: url("https://i.ya-webdesign.com/images/info-icon-png-11.png");
+    background-size: 100%;
+    background-position: center;
+    height: 1rem;
+    width: 1rem;
+    border: none;
+}
+
+.add-fish {
+    background-image: url('https://cdn2.iconfinder.com/data/icons/everything-but-the-kitchen-sink-2/100/common-06-512.png');
     background-size: 100%;
     background-position: center;
     height: 1rem;
@@ -158,6 +163,24 @@ nav {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+}
+
+.invisible-info {
+    display: none
+}
+
+.user-fish {
+    border: solid black;
+    height: 20rem;
+    width: 40rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-self: center;
 }
 
 h2 {
