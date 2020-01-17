@@ -69,7 +69,7 @@
                 <input class="fish-input" type="text" name="species" placeholder="e.g. cod, tuna, etc">
                 <input type="submit" value="search">
             </form>
-            <div class="fish-list" style='height:14.9rem;width:20rem;overflow:auto;'></div>
+            <div class="fish-list" style='height:14.9rem;width:21rem;overflow:auto;'></div>
         </div>
     </div>
     <div class="search-region">
@@ -91,7 +91,23 @@
     </div>
 </div>
 <div class="user-info invisible-info">
-    <div class="user-fish"></div>
+    <div class="user-fish">
+        <div class="your-fish">
+        <h3>Your Sustainable Seafood Choices:</h3>
+        <div class="user-fish-list" style='height:14.9rem;width:18rem;overflow:auto;text-align:center'></div>
+        </div>
+        <div class="your-region">
+            <h3 class="near-you">Sustainable Seafood Near You:</h3>
+            <div class="regional-seafood" style='height:12rem;width:18rem;overflow:auto;text-align:center;'></div>
+            <div class="change-region">
+                <p class="region-label">Change your region: </p>
+                <form class="update-region">
+                    <select class="new-region" name="region"></select>
+                    <input type="submit" value="Update Region">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
     

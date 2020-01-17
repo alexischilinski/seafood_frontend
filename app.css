@@ -139,7 +139,7 @@ nav {
 }
 
 .info-button {
-    background-image: url("https://i.ya-webdesign.com/images/info-icon-png-11.png");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd4_dMaMIhVsqQ2J6Aexq3gNVmQXgBA4hE7ZwhNPy8jHhsRuz4&s");
     background-size: 100%;
     background-position: center;
     height: 1rem;
@@ -148,7 +148,16 @@ nav {
 }
 
 .add-fish {
-    background-image: url('https://cdn2.iconfinder.com/data/icons/everything-but-the-kitchen-sink-2/100/common-06-512.png');
+    background-image: url('https://cdn4.iconfinder.com/data/icons/user-interface-131/32/add-512.png');
+    background-size: 100%;
+    background-position: center;
+    height: 1rem;
+    width: 1rem;
+    border: none;
+}
+
+.delete-fish {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/55ece940e4b048d1ed401c11/1450136257542-4DATU4KRB70MDENGJXJX/ke17ZwdGBToddI8pDm48kAf-OpKpNsh_OjjU8JOdDKBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwkCFOLgzJj4yIx-vIIEbyWWRd0QUGL6lY_wBICnBy59Ye9GKQq6_hlXZJyaybXpCc/X%3A++The+Unknown');
     background-size: 100%;
     background-position: center;
     height: 1rem;
@@ -174,13 +183,43 @@ nav {
     display: none
 }
 
+.your-fish {
+    width: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .user-fish {
     border: solid black;
     height: 20rem;
-    width: 40rem;
+    width: 50rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.your-region {
+    width: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.change-region {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.region-label {
+    font-family: arial;
+    font-size: 0.9rem;
+}
+
+.update-region {
+    display: flex;
 }
 
 h2 {
@@ -194,6 +233,7 @@ h3 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: bold;
+    font-family: arial;
 }
 
 h4 {
@@ -244,6 +284,7 @@ ul {
 li {
     list-style: none;
     font-size: 1rem;
+    font-family: arial
 }
 
 .alaska {
