@@ -4,6 +4,7 @@ const signupForm = document.querySelector('.signup-form')
 const loginForm = document.querySelector('.login-form')
 const regionDropdown = document.querySelector('.region-dropdown')
 const navbar = document.querySelector('nav')
+const fishGif = document.querySelector('.fish-gif')
 const userInfo = document.querySelector('.user-info')
 const userfishList = document.querySelector('.user-fish-list')
 const regionalSeafood = document.querySelector('.regional-seafood')
@@ -13,6 +14,10 @@ const updateRegion = document.querySelector('.update-region')
 const seafoodContainer = document.querySelector('.fish-list')
 const speciesForm = document.querySelector('.fish-form')
 const speciesInput = document.querySelector('.fish-input')
+const wildButton = document.querySelector('.wild')
+const farmedButton = document.querySelector('.farmed')
+const clearButton = document.querySelector('.clear')
+const wildFarmedContainer = document.querySelector('.wild-farmed-container')
 
 const modal = document.querySelector('.modal')
 const trigger = document.querySelector('.info-button')
@@ -33,7 +38,7 @@ const availability = document.querySelector('.availability')
 const healthBenefits = document.querySelector('.health-benefits')
 
 window.addEventListener('DOMContentLoaded', (event)=>{
-fetch('https://mod3seafood.herokuapp.com/fish')
+fetch('http://localhost:3000/fish')
     .then(response=>response.json())
     .then(fishes=>fishes.sort(aToZ).map(fishNames))
 
@@ -43,6 +48,12 @@ function aToZ(a, b){
     else if (a.name > b.name){return 1}
     else {return 0}
 }
+
+fishGif.classList.add('horizTranslate')
+
+wildButton.innerText = "Wild"
+farmedButton.innerText = "Farmed"
+clearButton.innerText = "Clear Results"
 
 function fishNames(fish){
     const fishName = document.createElement('li')
@@ -74,6 +85,14 @@ function fishNames(fish){
         displayFishInfo(fish)
     })
 
+    wildButton.addEventListener('click', (event) => {
+        showWildFish(fish)
+    })
+
+    farmedButton.addEventListener('click', (event) => {
+        showFarmedFish(fish)
+    })
+
     closeButton.addEventListener('click', toggleModal)
 
     fishName.appendChild(infoButton)
@@ -97,6 +116,28 @@ speciesForm.addEventListener('submit', (event) => {
             fish.style.display = "none"
         }
     })
+})
+
+function showWildFish(fish){
+    const wildFish = document.createElement('li')
+    if (fish.harvest_type === "Wild") {
+        wildFish.innerText = fish.name
+        wildFish.className = "wild-fish"
+    }
+    wildFarmedContainer.appendChild(wildFish)
+}
+
+function showFarmedFish(fish){
+    const farmedFish = document.createElement('li')
+    if (fish.harvest_type === "Farmed") {
+        farmedFish.innerText = fish.name
+        farmedFish.className = "farmed-fish"
+    }
+    wildFarmedContainer.appendChild(farmedFish)
+}
+
+clearButton.addEventListener('click', (event) => {
+    wildFarmedContainer.innerHTML = ''
 })
 
 signupButton.addEventListener('click', (event)=> {
@@ -193,7 +234,7 @@ map.addEventListener('load', ()=>{
     })
 })
 
-fetch('https://mod3seafood.herokuapp.com/regions')
+fetch('http://localhost:3000/regions')
     .then(response=>response.json())
     .then(regions=>regions.sort(aToZ).map(regionNames))
 

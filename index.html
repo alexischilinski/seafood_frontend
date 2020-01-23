@@ -34,6 +34,9 @@
             <input type="submit" value="Login"/>
         </form>
     </nav>
+    <div class="animation-div">
+        <img class="fish-gif" src="https://media0.giphy.com/media/65Tm9HSCNCKC3nHTte/source.gif">
+    </div>
     <div class="modal">
         <div class="modal-content">
             <button class="close-button">X</button>
@@ -63,13 +66,23 @@
     </div>
 <div class="search">
     <div class="search-seafood">
-        <h3>Search by Seafood Name</h3>
+        <h3>Browse Most Common Seafood Options</h3>
         <div class="seafood-list">
+            <div class="search-by-name">
                 <form class="fish-form">
                     <input class="fish-input" type="text" name="species" placeholder="e.g. cod, tuna, etc">
                     <input class="search-submit" type="submit" value="">
                 </form>
-            <div class="fish-list" style='height:14.8rem;width:21rem;overflow:auto;'></div>
+                <div class="fish-list" style='height:14.9rem;width:21rem;overflow:auto;'></div>
+            </div>
+            <div class="wild-or-farmed">
+                <div class="wild-farmed-buttons">
+                    <button class="wild"></button>
+                    <button class="farmed"></button>
+                    <button class="clear"></button>
+                </div>
+                <div class="wild-farmed-container" style='height:10rem;width:18rem;overflow:auto;'></div>
+            </div>
         </div>
     </div>
     <div class="search-region">

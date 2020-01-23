@@ -119,6 +119,23 @@ nav {
     display: none
 }
 
+.animation-div {
+    height: 3rem;
+}
+
+.fish-gif {
+    height: 3rem;
+}
+
+.horizTranslate {
+    /* -webkit-transition: 15s; */
+    /* -moz-transition: 15s; */
+    -ms-transition: 15s;
+    /* -o-transition: 15s; */
+    transition: 15s;
+    margin-left: 100% !important;
+  }
+
 .search {
     display: flex;
     justify-content: space-evenly;
@@ -136,7 +153,7 @@ nav {
     border: solid #000000;
     display: flex;
     flex-direction: column;
-    margin-top: 1rem
+    /* margin-top: 1rem */
 }
 
 .search-submit {
@@ -151,7 +168,56 @@ nav {
 }
 
 .seafood-list {
-    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.search-by-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.wild-or-farmed {
+    width: 21rem;
+    height: 14.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.wild-farmed-buttons {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.wild {
+    width: 6rem;
+    background-color: purple;
+    color: white;
+}
+
+.wild-fish {
+    color: purple;
+}
+
+.farmed {
+    width: 6rem;
+    background-color: #175b8b;
+    color: white;
+}
+
+.farmed-fish {
+    color: #175b8b;
+}
+
+.clear {
+    width: 6rem;
+}
+
+.wild-farmed-container {
+    border: solid black;
+    height: 10rem;
 }
 
 .info-button {
@@ -187,7 +253,7 @@ nav {
     border: solid black;
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 
 .user-info {
@@ -256,6 +322,11 @@ h4 {
     text-align: center;
     margin-top: 0.5rem;
     font-weight: bold;
+}
+
+.fish-form {
+    display: flex;
+    justify-content: center;
 }
 
 .fish-input {
