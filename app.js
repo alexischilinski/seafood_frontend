@@ -32,7 +32,7 @@ const fishingRate = document.querySelector('.fishing-rate')
 const availability = document.querySelector('.availability')
 const healthBenefits = document.querySelector('.health-benefits')
 
-
+window.addEventListener('DOMContentLoaded', (event)=>{
 fetch('https://mod3seafood.herokuapp.com/fish')
     .then(response=>response.json())
     .then(fishes=>fishes.sort(aToZ).map(fishNames))
@@ -268,6 +268,8 @@ if(localStorage.token){
     userInfo.classList.remove('invisible-info')
     navbar.appendChild(logoutButton)
 
+
+
 fetch(`http://localhost:3000/users/${localStorage.getItem('user')}`, {
     method: 'GET',
     headers: {
@@ -354,3 +356,4 @@ function regionFish(fish){
     )
 }
 
+})
