@@ -6,6 +6,7 @@ const regionDropdown = document.querySelector('.region-dropdown')
 const navbar = document.querySelector('nav')
 const fishGif = document.querySelector('.fish-gif')
 const flippedFish = document.querySelector('.flipped-fish-gif')
+const doryButton = document.querySelector('.gif-button')
 const userInfo = document.querySelector('.user-info')
 const userfishList = document.querySelector('.user-fish-list')
 const regionalSeafood = document.querySelector('.regional-seafood')
@@ -21,8 +22,10 @@ const clearButton = document.querySelector('.clear')
 const wildFarmedContainer = document.querySelector('.wild-farmed-container')
 
 const modal = document.querySelector('.modal')
+const doryModal = document.querySelector('.dory-modal')
 const trigger = document.querySelector('.info-button')
 const closeButton = document.querySelector('.close-button')
+const doryCloseButton = document.querySelector('.dory-close-button')
 
 const map = document.querySelector('#svg')
 
@@ -210,6 +213,22 @@ function toggleLogin(){
 
 function toggleModal(){
     modal.classList.toggle('show-modal')
+}
+
+fishGif.addEventListener('click', (event)=>{
+    toggleDoryModal()
+})
+
+flippedFish.addEventListener('click', (event)=>{
+    toggleDoryModal()
+})
+
+doryCloseButton.addEventListener('click', (event)=>{
+    toggleDoryModal()
+})
+
+function toggleDoryModal(){
+    doryModal.classList.toggle('show-dory-modal')
 }
 
 function windowOnClick(event){

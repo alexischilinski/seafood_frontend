@@ -125,17 +125,29 @@ nav {
 }
 
 .fish-gif {
+    background-image: url('https://media0.giphy.com/media/65Tm9HSCNCKC3nHTte/source.gif');
+    background-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 3rem;
     height: 3rem;
     position: absolute;
     left: -3rem;
+    border: none;
 } 
 
 .flipped-fish-gif {
+    background-image: url('https://media0.giphy.com/media/65Tm9HSCNCKC3nHTte/source.gif');
+    background-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 3rem;
     height: 3rem;
     transform: scaleX(-1);
     float: right;
     position: absolute;
     right: -3rem;
+    border: none;
 }
 
 .righthorizTranslate {
@@ -473,6 +485,87 @@ object {
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.dory-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0x linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.dory-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 30rem;
+    height:30rem;
+    border-radius: 0.5rem;
+}
+
+.dory-close-button {
+    float: right;
+    width: 4.5rem;
+    height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    /* background-color: lightgray; */
+    background-color: #175b8b;
+    color: white;
+    margin-left: 2rem;
+}
+
+.show-dory-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.dory-div {
+    display: flex;
+    justify-content: center;
+}
+
+.dory-info {
+    border: solid black;
+    height: 25rem;
+    width: 25rem;
+    z-index: -3;
+    position: absolute;
+}
+
+.dory-header {
+    font-family: 'Oregano', cursive;
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+
+.dory-bio {
+    font-family: arial;
+    size: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+.dory-photo {
+    height: 20rem;
+    width: 30rem;
+    float: right;
+    z-index: -3;
+    position: absolute;
+    margin-left: 14rem;
+    margin-top: 14rem;
 }
 
 .fish-data {
