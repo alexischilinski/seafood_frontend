@@ -5,6 +5,7 @@ const loginForm = document.querySelector('.login-form')
 const regionDropdown = document.querySelector('.region-dropdown')
 const navbar = document.querySelector('nav')
 const fishGif = document.querySelector('.fish-gif')
+const flippedFish = document.querySelector('.flipped-fish-gif')
 const userInfo = document.querySelector('.user-info')
 const userfishList = document.querySelector('.user-fish-list')
 const regionalSeafood = document.querySelector('.regional-seafood')
@@ -49,7 +50,40 @@ function aToZ(a, b){
     else {return 0}
 }
 
-fishGif.classList.add('horizTranslate')
+function toggleFishGif(){
+    addMovement()
+    setTimeout(removeMovement, 10000)
+    setTimeout(addFlippedMovement, 10000)
+    setTimeout(addMovement, 20000)
+    setTimeout(removeFlippedMovement, 20000)
+    setTimeout(addFlippedMovement, 30000)
+    setTimeout(removeMovement, 30000)
+    setTimeout(removeFlippedMovement, 40000)
+    setTimeout(toggleFishGif, 40000)
+}
+
+function addMovement(){
+    fishGif.classList.add('righthorizTranslate')
+}
+
+function removeMovement(){
+    fishGif.classList.remove('righthorizTranslate')
+}
+
+function addFlippedMovement(){
+    flippedFish.classList.add('lefthorizTranslate')
+}
+
+function removeFlippedMovement(){
+    flippedFish.classList.remove('lefthorizTranslate')
+}
+
+toggleFishGif()
+
+function logSomething(){
+    console.log("hi")
+}
+
 
 wildButton.innerText = "Wild"
 farmedButton.innerText = "Farmed"

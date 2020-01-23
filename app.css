@@ -121,19 +121,43 @@ nav {
 
 .animation-div {
     height: 3rem;
+    overflow: hidden;
 }
 
 .fish-gif {
     height: 3rem;
+    position: absolute;
+    left: -3rem;
+} 
+
+.flipped-fish-gif {
+    height: 3rem;
+    transform: scaleX(-1);
+    float: right;
+    position: absolute;
+    right: -3rem;
 }
 
-.horizTranslate {
-    /* -webkit-transition: 15s; */
-    /* -moz-transition: 15s; */
+.righthorizTranslate {
+    -webkit-transition: 15s;
+    -moz-transition: 15s;
     -ms-transition: 15s;
-    /* -o-transition: 15s; */
+    -o-transition: 15s;
     transition: 15s;
-    margin-left: 100% !important;
+    margin-left: 120% !important;
+  }
+
+  .lefthorizTranslate {
+    -webkit-transition: 15s;
+    -moz-transition: 15s;
+    -ms-transition: 15s;
+    -o-transition: 15s;
+    transition: 15s;
+    margin-right: 120% !important;
+  }
+
+  .transitionDelay {
+      transition-delay: 10s
   }
 
 .search {
