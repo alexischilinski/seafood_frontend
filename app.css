@@ -65,6 +65,7 @@ header {
 .title1 {
     font-family: 'Oregano', cursive;
     font-size: 3.5rem;
+    margin-top: 0.8rem;
 }
 
 .title2 {
@@ -539,7 +540,7 @@ object {
 
 .dory-info {
     border: solid black;
-    height: 25rem;
+    height: 26rem;
     width: 25rem;
     z-index: -3;
     position: absolute;
@@ -547,15 +548,36 @@ object {
 
 .dory-header {
     font-family: 'Oregano', cursive;
-    margin-left: 1rem;
     font-size: 3rem;
+    text-align: center;
 }
 
-.dory-bio {
+.help {
     font-family: arial;
-    size: 0.5rem;
-    margin-left: 0.5rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
+    text-align: center;
+}
+
+.dory-help {
+    font-family: arial;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.blurb {
+    font-family: arial;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+}
+
+.blurb-carbon {
+    font-family: arial;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 4.5rem;
 }
 
 .dory-photo {
@@ -564,8 +586,8 @@ object {
     float: right;
     z-index: -3;
     position: absolute;
-    margin-left: 14rem;
-    margin-top: 14rem;
+    margin-left: 14.5rem;
+    margin-top: 13rem;
 }
 
 .fish-data {
