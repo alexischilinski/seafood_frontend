@@ -11,7 +11,7 @@ lite-server
 
 ### Prerequisites
 
-You will need to have lite-server, or some other variation, installed in order to run this app. This app was built with HTML, CSS, and Javascript.
+You will need to have lite-server, or some other variation, installed in order to run this app. This app was built with HTML, CSS, and Javascript. This frontend is connected to my "seafood-backend" repo (https://github.com/alexiscait142/seafood-backend).
 
 
 ## Resources
