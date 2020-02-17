@@ -3,8 +3,16 @@
 This is the frontend for SEAstainability, an app built to show sustainable seafood choices.
 
 This app is fully deployed at:
-https://mod3seafood.firebaseapp.com/ & 
-https://mod3seafood.herokuapp.com/fish
+* https://mod3seafood.firebaseapp.com/
+* https://mod3seafood.herokuapp.com/fish
+
+App functionality:
+
+* Filter through the sustainable seafood choices on the left by typing in a fish name.
+* View fish that are best farmed or caught wild.
+* Filter through the seafood list by clicking on a region on the map (SVG).
+* Sign-up/login to view seafood choices in your area and add seafood choices to your profile.
+* Click on the Dory icon to learn more about protecting our oceans.
 
 ## Getting Started/Installing
 
