@@ -5,6 +5,7 @@ This is the frontend for SEAstainability, an app built to show sustainable seafo
 This app is fully deployed at:
 * https://mod3seafood.firebaseapp.com/
 * https://mod3seafood.herokuapp.com/fish
+** https://mod3seafood.herokuapp.com/regions
 
 App functionality:
 
