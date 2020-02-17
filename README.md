@@ -2,6 +2,10 @@
 
 This is the frontend for SEAstainability, an app built to show sustainable seafood choices.
 
+This app is fully deployed at:
+https://mod3seafood.firebaseapp.com/ & 
+https://mod3seafood.herokuapp.com/fish
+
 ## Getting Started/Installing
 
 Fork and clone this repo. To open this file, run the command:
